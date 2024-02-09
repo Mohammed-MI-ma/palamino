@@ -1,0 +1,8 @@
+.fullHeight {
+  width: 100%;
+  background-color: #0d0d0f;
+  height: calc(
+    100vh - 64px
+  ); /* Adjust 64px to account for any fixed header height */
+  /* You can adjust the height calculation as needed */
+}

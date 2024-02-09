@@ -1,0 +1,70 @@
+.mainContainer {
+  width: 100%;
+  box-shadow: inset 5em 1em gold;
+  background: red;
+  color: white;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerContainer {
+  max-width: 1700px;
+}
+.tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* Styles for extra small devices (phones) */
+@media (max-width: 576px) {
+  /* Your CSS styles here */
+}
+
+/* Styles for small devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Your CSS styles here */
+}
+
+/* Styles for medium devices (laptops and desktops) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .innerContainer {
+    width: 100%;
+    background: var(--color-primary);
+    color: white;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Styles for large devices (desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .innerContainer {
+    width: 100%;
+    background: var(--color-primary);
+    color: white;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Styles for extra large devices (large desktops and TVs) */
+@media (min-width: 1201px) {
+  .innerContainer {
+    width: 100%;
+    background: var(--color-primary);
+    color: white;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 54px;
+    padding-right: 54px;
+    box-shadow: ;
+  }
+}
