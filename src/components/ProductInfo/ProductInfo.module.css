@@ -1,0 +1,37 @@
+/* ProductInfo.module.css */
+
+.container {
+  /* Styles for the container */
+  margin-top: 40x;
+}
+
+.productName {
+  /* Styles for the product name */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--bs-body-font-size);
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+.productDescription {
+  /* Styles for the product description */
+  line-height: 14px;
+  text-align: left;
+  font-family: "MontserratRegular";
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.productPricing {
+  /* Styles for the product pricing */
+  text-align: left;
+  font-size: var(--bs-body-font-size);
+  font-weight: bolder;
+}
+
+.productStars {
+  /* Styles for the product stars */
+  text-align: left;
+}

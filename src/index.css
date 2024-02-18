@@ -15,16 +15,29 @@
   font-family: "CairoSemiBold";
   src: url("../src/assets/fonts/Cairo-Medium.ttf") format("truetype");
 }
+@font-face {
+  font-family: "CairoLight";
+  src: url("../src/assets/fonts/Cairo-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LogoFont";
+  src: url("../src/assets/fonts/TiltPrism-Regular.ttf") format("truetype");
+}
 :root {
   --font-primary: "CairoRegular", sans-serif;
+  --font-primary-details: "CairoLight", sans-serif;
+  --font-primary-bold: "CairoBold", sans-serif;
   --font-secondary: "Roboto", sans-serif;
+  --font-logo: "LogoFont", sans-serif;
 }
 
 /* Font Sizes */
 :root {
-  --font-size-small: 14px;
-  --font-size-medium: 16px;
-  --font-size-large: 18px;
+  --font-tiny-size: 0.625rem; /* 10px converted to rem */
+  --font-extra-small-size: 0.625rem; /* 10px converted to rem */
+  --font-small-size: 0.875rem; /* 14px converted to rem */
+  --font-medium-size: 1rem; /* 16px converted to rem */
+  --font-large-size: 1.125rem; /* 18px converted to rem */
 }
 
 /* Colors */
@@ -39,23 +52,23 @@
 
 /* Spacing */
 :root {
-  --spacing-small: 8px;
-  --spacing-medium: 16px;
-  --spacing-large: 24px;
+  --spacing-small: 0.5rem; /* 8px converted to rem */
+  --spacing-medium: 1rem; /* 16px converted to rem */
+  --spacing-large: 1.5rem; /* 24px converted to rem */
 }
 
 /* Border Radius */
 :root {
-  --border-radius-small: 4px;
-  --border-radius-medium: 8px;
-  --border-radius-large: 12px;
+  --border-radius-small: 0.25rem; /* 4px converted to rem */
+  --border-radius-medium: 0.5rem; /* 8px converted to rem */
+  --border-radius-large: 0.75rem; /* 12px converted to rem */
 }
 
 /* Box Shadows */
 :root {
-  --box-shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --box-shadow-large: 0 6px 12px rgba(0, 0, 0, 0.1);
+  --box-shadow-small: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 2px converted to rem */
+  --box-shadow-medium: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px converted to rem */
+  --box-shadow-large: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.1); /* 6px converted to rem */
 }
 
 /* Z-Index */
@@ -67,47 +80,65 @@
 
 /* Other Variables */
 :root {
-  --max-width-container: 1200px; /* Maximum width of the container */
+  --max-width-container: 75rem; /* 1200px converted to rem */
 }
 body {
   font-family: var(--font-primary);
   margin: 0;
+  background-color: #030303;
 }
-
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-switch
   .ant-switch-inner
   .ant-switch-inner-unchecked {
-  margin-top: -27px !important;
+  margin-top: -1.688rem !important; /* -27px converted to rem */
 }
+
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-switch .ant-switch-inner {
-  border: 1px solid white !important;
+  border: 0.063rem solid white !important; /* 1px converted to rem */
 }
+
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
   background: none !important;
 }
+
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-switch:hover:not(.ant-switch-disabled) {
   background: none !important;
 }
+
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-switch.ant-switch-checked {
   background: none !important;
 }
-:where(.css-dev-only-do-not-override-1rqnfsa).ant-btn-default {
-  background: var(--color-primary) !important;
-  border-color: var(--color-primary) !important;
-  color: rgb(255 255 255 / 88%) !important;
-}
+
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-btn {
   line-height: 0 !important;
-  padding: 4px 4px !important;
+  padding: 0.25rem 0.25rem !important; /* 4px converted to rem */
 }
 
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-switch {
-  min-width: 55px !important;
+  min-width: 3.438rem !important; /* 55px converted to rem */
 }
 
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-dropdown
   .ant-dropdown-menu
   .ant-dropdown-menu-item {
-  font-size: 10px !important;
-  font-family: MontserratSemiBold;
+  font-size: 0.625rem !important; /* 10px converted to rem */
+  font-family: "MontserratSemiBold";
+}
+/* ScrollBar.css */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -10,14 +10,7 @@ const menuItems = [
       "About Us",
     ],
   },
-  {
-    title: "Shop",
-    submenus: [
-      "Categories",
-      "Filter Options (Size, Color, Style)",
-      "Search Bar",
-    ],
-  },
+
   {
     title: "My Account",
     submenus: ["Login/Register"],
@@ -31,10 +24,7 @@ const menuItems = [
       "Latest Trends",
     ],
   },
-  {
-    title: "Contact Us",
-    submenus: ["Customer Support", "Contact Form", "Social Media Links"],
-  },
+
   {
     title: "Policies",
     submenus: [
@@ -43,10 +33,6 @@ const menuItems = [
       "Privacy Policy",
       "Terms and Conditions",
     ],
-  },
-  {
-    title: "Events",
-    submenus: ["Art Exhibitions", "Workshops", "Art Fairs"],
   },
 ];
 export default menuItems;

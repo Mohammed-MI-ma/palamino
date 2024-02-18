@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Switch, message } from "antd";
+import { Avatar, Switch, message } from "antd";
 import { MdOutlineModeNight } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import NavbarItems from "../NavbarItems";
 import InternationalizationDropDown from "../InternationalizationDropDown";
 import style from "./Navbar.module.css";
 import { useTranslation } from "react-i18next";
+import { RxAvatar } from "react-icons/rx";
+import { LOGO } from "../../images";
+import { FaRegCopyright } from "react-icons/fa";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -36,25 +39,62 @@ const Navbar = () => {
     <div className={style.mainContainer}>
       <div className={style.innerContainer}>
         {/* Logo */}
-        <div className={style.logo}> {t("brandTitle")}</div>
-        {/* Navbar items */}
-        <div className={style.navbarItems}>
-          <NavbarItems />
+        <div className={style.logo}>
+          {" "}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "start",
+              alignItems: "start",
+              flexDirection: "column",
+            }}
+          >
+            {" "}
+            <span>
+              {/* Add your logo here */}
+              {t("brandTitle")}
+              <sup>
+                <FaRegCopyright size={10} />
+              </sup>
+            </span>
+            <span style={{ fontSize: "10px" }}>
+              {/* Add your logo here */}
+              Unleash Your Creativity
+            </span>
+          </div>{" "}
+          <div style={{ visibility: "hidden" }}>
+            {" "}
+            {/* Add your logo here */}
+            {t("brandTitle")}
+          </div>
         </div>
-        {/* Tools section */}
-        <div className={style.tools}>
-          {/* Message context holder */}
-          {contextHolder}
-          {/* Switch component for toggling light/dark mode */}
-          <Switch
-            title="Toggle light/dark mode"
-            onChange={onChange}
-            checkedChildren={<CiLight size={"20px"} />}
-            unCheckedChildren={<MdOutlineModeNight size={"20px"} />}
-            checked={isChecked}
-          />
-          {/* Internationalization drop-down component */}
-          <InternationalizationDropDown />
+        <div
+          style={{
+            width: "50vw",
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          {/* Navbar items */}
+          <div className={style.navbarItems}>
+            <NavbarItems />
+          </div>
+          {/* Tools section */}
+          <div className={style.tools}>
+            {/* Message context holder */}
+            {contextHolder}
+            {/* Switch component for toggling light/dark mode */}
+
+            <Switch
+              title="Toggle light/dark mode"
+              onChange={onChange}
+              checkedChildren={<CiLight size={"20px"} />}
+              unCheckedChildren={<MdOutlineModeNight size={"20px"} />}
+              checked={isChecked}
+            />
+            {/* Internationalization drop-down component */}
+            <InternationalizationDropDown />
+          </div>
         </div>
       </div>
     </div>

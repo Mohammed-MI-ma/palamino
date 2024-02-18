@@ -17,9 +17,9 @@ const DropdownMenu = ({ title, submenus, t }) => {
 
   return (
     <Dropdown overlay={menu}>
-      <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
+      <span>
         {t(title)} <DownOutlined />
-      </a>
+      </span>
     </Dropdown>
   );
 };

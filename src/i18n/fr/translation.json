@@ -1,5 +1,5 @@
 {
-  "brandTitle": "Les Ateliers Palamino",
+  "brandTitle": "Palamino's.",
   "Home": "Accueil",
   "Shop": "Boutique",
   "Product Pages": "Pages Produits",
@@ -69,5 +69,13 @@
   "My Account": "Mon Compte",
   "Contact Us": "Nous Contacter",
   "Policies": "Politiques",
-  "Events": "Événements"
+  "Events": "Événements",
+
+  "heroSubtitle": "Là où l'élégance rencontre l'expression",
+  "heroTitle": "Bienvenue aux Ateliers Palamino",
+  "heroParagraph": "Imprégnez-vous des coups de pinceau éloquents de Mekki, où chaque toile raconte une histoire, chaque pièce allie créativité et sophistication",
+  "exploreMore": "Explorer plus",
+  "productName": "Allégeance au Roi de Palamino",
+  "productDescription": "'Allegiance to the King' est une toile royale, tissant une tapisserie de loyauté avec des teintes riches et une symbolique imposante. La composition, dominée par des images majestueuses et des couleurs opulentes, évoque un profond sentiment de dévotion. Avec un travail de pinceau méticuleux et une palette royale, elle se présente comme un témoignage visuel d'engagement indéfectible.",
+  "productPricing": "11000.00"
 }

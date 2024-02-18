@@ -1,12 +1,10 @@
 .container {
-  width: 100%;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 27px;
   font-family: "MontserratSemiBold";
-  font-size: 10px;
+  font-size: 14px;
 }
 
 /* Styles for extra small devices (phones) */
