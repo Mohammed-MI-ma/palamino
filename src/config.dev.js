@@ -1,4 +1,13 @@
-import { IMAGE_1, IMAGE_2, IMAGE_3, IMAGE_4, LOGO, MEKKI } from "./images.js";
+import {
+  IMAGE_1,
+  IMAGE_2,
+  IMAGE_3,
+  IMAGE_4,
+  LOGO,
+  MEEKI_FACE,
+  MEKKI,
+  POSTER,
+} from "./images.js";
 
 const ImageConfig = [
   { uri: IMAGE_1 },
@@ -7,6 +16,8 @@ const ImageConfig = [
   { uri: LOGO },
   { uri: MEKKI },
   { uri: IMAGE_4 },
+  { uri: MEEKI_FACE },
+  { uri: POSTER },
 ];
 
 export default ImageConfig;

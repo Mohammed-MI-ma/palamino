@@ -41,3 +41,9 @@
     transform: rotate(360deg);
   }
 }
+:where(.css-dev-only-do-not-override-1rqnfsa).ant-flex-wrap-wrap {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

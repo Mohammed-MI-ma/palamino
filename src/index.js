@@ -7,13 +7,17 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import "./index.css";
+import { Provider } from "react-redux";
+import Store from "./store";
+
+import { ConfigProvider } from "antd";
 
 // Initialize i18n
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .init({
-    fallbackLng: "en", // Fallback language
+    fallbackLng: "fr", // Fallback language
     debug: false, // Disable debug mode in production
     interpolation: {
       escapeValue: false, // Not needed for React
@@ -27,12 +31,17 @@ i18n
       },
     },
   });
+// Get the currently used language
+
+// Set the locale based on the current language
 
 // Render the app
 ReactDOM.render(
   <I18nextProvider i18n={i18n}>
     <React.StrictMode>
-      <App />
+      <Provider store={Store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </I18nextProvider>,
   document.getElementById("root")

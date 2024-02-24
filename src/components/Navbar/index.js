@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Avatar, Switch, message } from "antd";
+import { Switch, message } from "antd";
 import { MdOutlineModeNight } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import NavbarItems from "../NavbarItems";
 import InternationalizationDropDown from "../InternationalizationDropDown";
 import style from "./Navbar.module.css";
 import { useTranslation } from "react-i18next";
-import { RxAvatar } from "react-icons/rx";
-import { LOGO } from "../../images";
 import { FaRegCopyright } from "react-icons/fa";
+import { Divider } from "antd";
+import MusicComponent from "../MusicComponent";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -45,6 +45,7 @@ const Navbar = () => {
             style={{
               display: "flex",
               justifyContent: "start",
+              position: "relative",
               alignItems: "start",
               flexDirection: "column",
             }}
@@ -53,15 +54,18 @@ const Navbar = () => {
             <span>
               {/* Add your logo here */}
               {t("brandTitle")}
+
               <sup>
                 <FaRegCopyright size={10} />
               </sup>
+              <MusicComponent />
             </span>
             <span style={{ fontSize: "10px" }}>
               {/* Add your logo here */}
-              Unleash Your Creativity
+              {t("slogan")}
             </span>
           </div>{" "}
+          <Divider type="vertical" />
           <div style={{ visibility: "hidden" }}>
             {" "}
             {/* Add your logo here */}

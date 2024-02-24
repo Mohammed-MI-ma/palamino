@@ -1,5 +1,6 @@
 {
-  "brandTitle": "Palamino's.",
+  "brandTitle": "Le Palamino.",
+  "slogan": "Magasinez, Apprenez et Embrassez l'Artiste en Vous !",
   "Home": "Accueil",
   "Shop": "Boutique",
   "Product Pages": "Pages Produits",
@@ -77,5 +78,10 @@
   "exploreMore": "Explorer plus",
   "productName": "Allégeance au Roi de Palamino",
   "productDescription": "'Allegiance to the King' est une toile royale, tissant une tapisserie de loyauté avec des teintes riches et une symbolique imposante. La composition, dominée par des images majestueuses et des couleurs opulentes, évoque un profond sentiment de dévotion. Avec un travail de pinceau méticuleux et une palette royale, elle se présente comme un témoignage visuel d'engagement indéfectible.",
-  "productPricing": "11000.00"
+  "productPricing": "11000.00",
+  "The Harmony Hub: Introducing Our Music Player Component": "Le Hub de l'Harmonie : Présentation de notre composant Lecteur de Musique",
+  "The Music Player component is a delightful addition to Palamino's e-commerce web app, showcasing his profound love for music, particularly blues and jazz. This component allows users to immerse themselves in the soothing sounds of Palamino's favorite genres while browsing, painting, or simply enjoying the ambiance. With a simple click on the music icon, users can toggle the music on or off, giving them full control over their audio experience. Whether you're exploring Palamino's latest artwork, shopping for paintings, or chatting with the artist, the Music Player adds a touch of harmony to your journey. Plus, for those who prefer a quieter browsing experience, the option to deactivate the sound is just a click away, providing a customizable and enjoyable user experience.": "Le composant Lecteur de Musique est un ajout délicieux à l'application web e-commerce de Palamino, mettant en valeur son amour profond pour la musique, en particulier le blues et le jazz. Ce composant permet aux utilisateurs de se plonger dans les sons apaisants des genres musicaux préférés de Palamino tout en naviguant, peignant ou simplement en profitant de l'ambiance. Avec un simple clic sur l'icône de musique, les utilisateurs peuvent activer ou désactiver la musique, leur donnant un contrôle total sur leur expérience audio. Que vous exploriez les dernières œuvres d'art de Palamino, achetiez des peintures ou discutiez avec l'artiste, le Lecteur de Musique ajoute une touche d'harmonie à votre parcours. De plus, pour ceux qui préfèrent une expérience de navigation plus calme, l'option de désactiver le son est à portée de clic, offrant une expérience utilisateur personnalisable et agréable.",
+  "Palamino invites you to immerse yourself in the world of blues and jazz music while exploring our web app. Feel free to deactivate this option if you prefer": "Palamino vous invite à plonger dans le monde de la musique blues et jazz tout en explorant notre application web. N'hésitez pas à désactiver cette option si vous le préférez",
+  "Basic Modal": "Modal Basique",
+  "Some contents...": "Contenu..."
 }

@@ -1,5 +1,7 @@
 {
-  "brandTitle": "Les Ateliers Palamino",
+  "brandTitle": "Palamino's.",
+  "slogan": "Shop, Learn, and Embrace Your Inner Artist!",
+
   "Home": "Home",
   "Shop": "Shop",
   "Product Pages": "Product Pages",
@@ -73,5 +75,10 @@
   "heroSubtitle": "Where elegance meets expression",
   "heroTitle": "Welcome to Les Ateliers Palamino",
   "heroParagraph": "Immerse yourself in Mekki's eloquent brushstrokes, where each canvas tells a story, each piece combines creativity and sophistication",
-  "exploreMore": "Explore More"
+  "exploreMore": "Explore More",
+  "The Harmony Hub: Introducing Our Music Player Component": "The Harmony Hub: Introducing Our Music Player Component",
+  "The Music Player component is a delightful addition to Palamino's e-commerce web app, showcasing his profound love for music, particularly blues and jazz. This component allows users to immerse themselves in the soothing sounds of Palamino's favorite genres while browsing, painting, or simply enjoying the ambiance. With a simple click on the music icon, users can toggle the music on or off, giving them full control over their audio experience. Whether you're exploring Palamino's latest artwork, shopping for paintings, or chatting with the artist, the Music Player adds a touch of harmony to your journey. Plus, for those who prefer a quieter browsing experience, the option to deactivate the sound is just a click away, providing a customizable and enjoyable user experience.": "The Music Player component is a delightful addition to Palamino's e-commerce web app, showcasing his profound love for music, particularly blues and jazz. This component allows users to immerse themselves in the soothing sounds of Palamino's favorite genres while browsing, painting, or simply enjoying the ambiance. With a simple click on the music icon, users can toggle the music on or off, giving them full control over their audio experience. Whether you're exploring Palamino's latest artwork, shopping for paintings, or chatting with the artist, the Music Player adds a touch of harmony to your journey. Plus, for those who prefer a quieter browsing experience, the option to deactivate the sound is just a click away, providing a customizable and enjoyable user experience.",
+  "Palamino invites you to immerse yourself in the world of blues and jazz music while exploring our web app. Feel free to deactivate this option if you prefer": "Palamino invites you to immerse yourself in the world of blues and jazz music while exploring our web app. Feel free to deactivate this option if you prefer",
+  "Basic Modal": "Basic Modal",
+  "Some contents...": "Some contents..."
 }

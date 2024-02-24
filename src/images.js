@@ -9,4 +9,9 @@ export const IMAGE_4 =
 export const LOGO =
   "https://raw.githubusercontent.com/Mohammed-MI-ma/assets/main/Positive_Space-removebg-preview.png";
 export const MEKKI =
-  "https://raw.githubusercontent.com/Mohammed-MI-ma/assets/main/Group 38.png";
+  "https://raw.githubusercontent.com/Mohammed-MI-ma/assets/main/heroImage.png";
+
+export const MEEKI_FACE =
+  "https://raw.githubusercontent.com/Mohammed-MI-ma/assets/main/venyl.png";
+export const POSTER =
+  "https://raw.githubusercontent.com/Mohammed-MI-ma/assets/main/poster.png";

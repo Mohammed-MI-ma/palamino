@@ -1,31 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { Modal, Spin } from "antd";
-import { CiSettings } from "react-icons/ci";
-import { VscAccount } from "react-icons/vsc";
-import { FaRegFrownOpen } from "react-icons/fa";
+import React, { useEffect, useRef, useState } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+
+// Custom components
+import Navbar from "./components/Navbar"; // Custom navbar component
+import SocialMediaDrawer from "./components/SocialMediaDrawer"; // Custom social media drawer component
+
+// Utility functions and configurations
+import { loadFonts, loadImages } from "./services/functions/functions"; // Utility functions for loading fonts and images
+import { FontsConfig } from "./fontsConfig"; // Configuration for fonts
+import ImageConfig from "./config.dev"; // Configuration for images
+
+// Material Design icons
 import { MdDeveloperMode } from "react-icons/md";
-import { FloatButton } from "antd";
 
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import { loadFonts, loadImages } from "./services/functions/functions";
-import ImageConfig from "./config.dev";
-import { FontsConfig } from "./fontsConfig";
-import "bootstrap/dist/css/bootstrap.min.css";
+// Ant Design components
+import { FloatButton, ConfigProvider, Spin } from "antd";
+import frFR from "antd/locale/fr_FR"; // French locale for Ant Design
+import enUS from "antd/locale/en_US"; // English locale for Ant Design
 
-import "./App.css";
-import PaintingsComponent from "./components/PaintingsComponent";
+// Styling
+import "./App.css"; // CSS styles for the App component
+import HomeContainer from "./pages/Home";
 
 function App() {
+  const browserLanguage = navigator.language.split("-")[0];
+
+  //__HOOKS
   const [appIsReady, setAppIsReady] = useState(false);
+  const [locale, setLocale] = useState(browserLanguage === "fr" ? frFR : enUS);
   const [loading, setLoading] = useState(true);
-  const { t } = useTranslation();
-  const [open, setOpen] = useState(true);
-  const [confirmLoading, setConfirmLoading] = useState(false);
 
   useEffect(() => {
-    async function prepare() {
+    const fetchData = async () => {
       try {
         await Promise.all([loadFonts(FontsConfig), loadImages(ImageConfig)]);
         setAppIsReady(true);
@@ -34,22 +40,12 @@ function App() {
       } finally {
         setLoading(false);
       }
-    }
+    };
 
-    prepare();
-  }, []);
+    fetchData();
 
-  const handleOk = () => {
-    setConfirmLoading(true);
-    setTimeout(() => {
-      setOpen(false);
-      setConfirmLoading(false);
-    }, 2000);
-  };
-
-  const handleCancel = () => {
-    setOpen(false);
-  };
+    setLocale(browserLanguage === "fr" ? frFR : enUS);
+  }, [browserLanguage]);
 
   if (!appIsReady) {
     return (
@@ -68,48 +64,39 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Navbar />
+    <ConfigProvider locale={locale}>
+      <div className="App">
+        <Navbar />
 
-      <HeroSection />
-
-      <div
-        style={{
-          height: "650px",
-          width: "100%",
-          position: "relative",
-          background: "white",
-        }}
-      ></div>
-      {/*
-      <Modal
-        title={<CiSettings size={24} />}
-        open={open}
-        onOk={handleOk}
-        confirmLoading={confirmLoading}
-        onCancel={handleCancel}
-        okText={
-          <div className="modal-button">
-            <VscAccount />
-            <span>{t("CreateNewAccount")}</span>
-          </div>
-        }
-        cancelText={
-          <div className="modal-button">
-            <FaRegFrownOpen />
-            <span>{t("NoThanks")}</span>
-          </div>
-        }
-      >
-        <p style={{ fontFamily: "var(--font-primary)" }}>
-          {t("modalContentSettingOffline")}
-        </p>
-      </Modal>*/}
-      <FloatButton.Group shape="circle" style={{ right: 24 }}>
-        <FloatButton icon={<MdDeveloperMode />} />
-        <FloatButton.BackTop visibilityHeight={0} />
-      </FloatButton.Group>
-    </div>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={<Navigate to={`/${browserLanguage}/home`} />}
+            />
+            {/* English routes */}
+            <Route path="/en/home" element={<HomeContainer />} />
+            {/* French routes */}
+            <Route path="/fr/home" element={<HomeContainer />} />{" "}
+          </Routes>
+        </BrowserRouter>
+        <ConfigProvider
+          theme={{
+            components: {
+              Drawer: {
+                padding: "0px",
+              },
+            },
+          }}
+        >
+          <SocialMediaDrawer />
+        </ConfigProvider>
+        <FloatButton.Group shape="circle" style={{ right: 24 }}>
+          <FloatButton icon={<MdDeveloperMode />} />
+          <FloatButton.BackTop visibilityHeight={0} />
+        </FloatButton.Group>
+      </div>
+    </ConfigProvider>
   );
 }
 

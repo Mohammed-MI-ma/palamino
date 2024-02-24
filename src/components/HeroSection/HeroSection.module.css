@@ -1,10 +1,10 @@
 .leftContainer {
   width: 50vw;
   background-color: #e61149;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 4.0625rem);
 }
 .rightContainer {
   width: 50vw;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 4.0625rem);
   background-color: white;
 }

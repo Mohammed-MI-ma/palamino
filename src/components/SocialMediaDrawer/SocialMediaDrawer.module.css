@@ -1,0 +1,21 @@
+.drawerBaseStyle {
+  background: #008cb0;
+  text-align: center;
+  width: 100%;
+}
+/* Small devices (phones, 600px and up) */
+@media (min-width: 600px) {
+  /* CSS for small devices */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
